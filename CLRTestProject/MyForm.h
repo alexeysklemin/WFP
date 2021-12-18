@@ -181,17 +181,24 @@ namespace CLRTestProject {
 		}
 
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ log = loginTextBox -> Text;
+		/*String^ log = loginTextBox -> Text;
+		String^ pass = passTextBox->Text;
+		if (login_Password(log, pass)) {
+			mainForm^ mf = gcnew mainForm();
+			mf->Show();
+			MyForm::Hide();
+		}*/
+		
+	}
+	private: System::Void loginButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ log = loginTextBox->Text;
 		String^ pass = passTextBox->Text;
 		if (login_Password(log, pass)) {
 			mainForm^ mf = gcnew mainForm();
 			mf->Show();
 			MyForm::Hide();
 		}
-		
-	}
-	private: System::Void loginButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		Application::Exit();
+		//Application::Exit();
 	}
 };
 }
